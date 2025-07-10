@@ -1,36 +1,47 @@
 # 🧠 Resume Knowledge Base Builder with Vector Search & Reranking
 
-
-# Resume Search and Retrieval System
-
 This project implements a resume search and retrieval system using vector embeddings and reranking to efficiently match candidates to job criteria. It processes PDF resumes, converts them into a vector database, and retrieves relevant resumes using semantic search and reranking.
 
 ## Table of Contents
 
--   [Overview](https://grok.com/chat/7d23caa4-8911-4fe2-aafb-e29cee1c0675#overview)
--   [Features](https://grok.com/chat/7d23caa4-8911-4fe2-aafb-e29cee1c0675#features)
--   [Requirements](https://grok.com/chat/7d23caa4-8911-4fe2-aafb-e29cee1c0675#requirements)
--   [Installation](https://grok.com/chat/7d23caa4-8911-4fe2-aafb-e29cee1c0675#installation)
--   [Usage](https://grok.com/chat/7d23caa4-8911-4fe2-aafb-e29cee1c0675#usage)
--   [Code Structure](https://grok.com/chat/7d23caa4-8911-4fe2-aafb-e29cee1c0675#code-structure)
--   [How It Works](https://grok.com/chat/7d23caa4-8911-4fe2-aafb-e29cee1c0675#how-it-works)
--   [Example Query](https://grok.com/chat/7d23caa4-8911-4fe2-aafb-e29cee1c0675#example-query)
--   [Output](https://grok.com/chat/7d23caa4-8911-4fe2-aafb-e29cee1c0675#output)
--   [License](https://grok.com/chat/7d23caa4-8911-4fe2-aafb-e29cee1c0675#license)
+-   [Overview]
+-   [Features]
+-   [Requirements]
+-   [Installation]
+-   [Usage]
+-   [Code Structure]
+-   [How It Works]
+-   [Example Query]
+-   [Output]
+-   [License]
+
+# Resume Search and Retrieval System
+
+This project implements a resume search and retrieval system using vector embeddings and reranking to efficiently match candidates to job criteria. It is designed to handle large datasets of resumes across diverse fields, processing PDF resumes into a vector database for semantic search and reranking.
+
+## Table of Contents
+- [Overview](#overview)
+- [Features](#features)
+- [Requirements](#requirements)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Code Structure](#code-structure)
+- [How It Works](#how-it-works)
+- [Example Query](#example-query)
+- [Output](#output)
+- [License](#license)
 
 ## Overview
-
-The system loads PDF resumes from a directory, optionally merges metadata from a CSV file, and processes them into a FAISS vector database using text splitting and embeddings from the `thenlper/gte-small` model. It supports complex queries to retrieve resumes based on job roles, skills, experience, and locations, with reranking to ensure high relevance.
+The system is built to process large datasets of resumes from various professional fields, such as engineering, data science, finance, and more. It loads PDF resumes from a directory, optionally merges metadata from a CSV file, and transforms them into a FAISS vector database using text splitting and embeddings from the `thenlper/gte-small` model. The system supports complex queries to retrieve resumes based on job roles, skills, experience, and locations, with reranking to ensure high relevance, making it suitable for scalable recruitment pipelines.
 
 ## Features
-
--   **PDF Resume Loading**: Extracts text from PDF resumes using `PyPDFLoader`.
--   **Metadata Integration**: Merges metadata from a CSV file (e.g., candidate ID, category).
--   **Text Splitting**: Chunks resume content using `RecursiveCharacterTextSplitter` for efficient processing.
--   **Vector Database**: Builds a FAISS vector store with embeddings for semantic search.
--   **Semantic Search**: Retrieves resumes using cosine similarity.
--   **Reranking**: Applies `FlashrankRerank` to refine results to the top 5 most relevant resumes.
--   **Flexible Queries**: Supports complex queries with AND, OR, NOT operators, and filters for experience and location.
+- **Large-Scale PDF Resume Loading**: Efficiently extracts text from large collections of PDF resumes across diverse fields using `PyPDFLoader`.
+- **Metadata Integration**: Merges metadata from a CSV file (e.g., candidate ID, category) to enrich resume data.
+- **Text Splitting**: Chunks resume content using `RecursiveCharacterTextSplitter` for efficient processing of large datasets.
+- **Vector Database**: Builds a FAISS vector store with embeddings for semantic search, optimized for handling extensive resume collections.
+- **Semantic Search**: Retrieves resumes using cosine similarity, scalable for large datasets.
+- **Reranking**: Applies `FlashrankRerank` to refine results to the top 5 most relevant resumes, improving precision for targeted searches.
+- **Flexible Queries**: Supports complex queries with AND, OR, NOT operators, and filters for experience and location, adaptable to diverse job requirements.
 
 ## Requirements
 
@@ -148,5 +159,5 @@ A list of the top 5 resume IDs:
 
 ## License
 
-MIT License# Resume Search and Retrieval System
+MIT License
 
