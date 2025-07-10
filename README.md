@@ -72,9 +72,8 @@ The system is built to process large datasets of resumes from various profession
 1.  Clone the repository:
     
     ```bash
-    git clone <repository-url>
-    cd <repository-directory>
-    
+    git clone https://github.com/Bharathkumar1011/RAG-Powered-Candidate-Retrieval-System-with-Contextual-Reranking-/tree/main.git
+    cd RAG-Powered-Candidate-Retrieval-System-with-Contextual-Reranking 
     ```
     
 2.  Install dependencies:
