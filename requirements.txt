@@ -1,0 +1,14 @@
+torch
+transformers
+accelerate
+bitsandbytes
+langchain
+sentence-transformers
+faiss-cpu
+openpyxl
+datasets
+pypdf
+langchain-community
+langchain-huggingface
+ragatouille
+flashrank
